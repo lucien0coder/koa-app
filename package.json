@@ -1,0 +1,31 @@
+{
+  "name": "koa-app",
+  "version": "1.0.0",
+  "description": "hello koa2\u001b[D \u001b[2 example",
+  "main": "app.js",
+  "dependencies": {
+    "koa": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node start.js"
+  },
+  "keywords": [
+    "koa",
+    "2.0"
+  ],
+  "author": "lucienChu",
+  "license": "ISC",
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/lucien0coder/koa-app.git"
+  },
+  "dependencies":{
+    "babel-core": "6.13.2",
+    "babel-polyfill": "6.13.0",
+    "babel-preset-es2015-node6": "0.3.0",
+    "babel-preset-stage-3": "6.5.0",
+    "koa": "2.0.0",
+    "koa-router":"7.0.0"
+  }
+}
