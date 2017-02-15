@@ -1,24 +1,22 @@
-const Koa = require('koa')
+const Koa = require('koa');
 
-const app = new Koa()
+const bodyParser = require('koa-bodyparser');
 
+const controller = require('./controller');
+
+const app = new Koa();
+
+// log request URL:
 app.use(async (ctx, next) => {
-	console.log(ctx.request.method)
-	await next()
-})
+    console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
+    await next();
+});
 
-app.use(async (ctx, next) => {
-	const start = new Date().getTime()
-	await next()
-	const ms = new Date().getTime() - start
-	console.log('Time: '+ ms + 'ms')
-})
+// parse request body:
+app.use(bodyParser());
 
-app.use(async (ctx, next)=>{
-	await next()
-	ctx.response.type = 'text/html'
-	ctx.response.body = '<h1>Hello, Koa2!</h1>'
-})
+// add controllers:
+app.use(controller());
 
-app.listen(3000)
-console.log('koa-app start at port 3000')
+app.listen(3000);
+console.log('app started at port 3000...');
