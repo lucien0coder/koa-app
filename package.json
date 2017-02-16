@@ -4,9 +4,19 @@
   "description": "hello koa2\u001b[D \u001b[2 example",
   "main": "app.js",
   "dependencies": {
-    "koa": "^2.0.0"
+    "babel-core": "6.13.2",
+    "babel-polyfill": "6.13.0",
+    "babel-preset-es2015-node6": "0.3.0",
+    "babel-preset-stage-3": "6.5.0",
+    "koa": "2.0.0",
+    "koa-router": "7.0.0",
+    "koa-bodyparser": "3.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  },
   "scripts": {
     "test": "node start.js"
   },
@@ -16,16 +26,8 @@
   ],
   "author": "lucienChu",
   "license": "ISC",
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/lucien0coder/koa-app.git"
-  },
-  "dependencies":{
-    "babel-core": "6.13.2",
-    "babel-polyfill": "6.13.0",
-    "babel-preset-es2015-node6": "0.3.0",
-    "babel-preset-stage-3": "6.5.0",
-    "koa": "2.0.0",
-    "koa-router":"7.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucien0coder/koa-app.git"
   }
 }
